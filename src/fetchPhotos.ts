@@ -24,8 +24,6 @@ const getSearchUrl = (filters: Filter, params?: string) => {
 export const useFetchPhotos = (): FetchReturn => {
   const [photos, setPhotos] = useState<IPhoto[] | null>(null);
   const [loading, setLoading] = useState(false);
-  const key = process.env.API_KEY;
-  console.log(key);
 
   const fetchData = async (filters: Filter, params?: string): Promise<void> => {
     getSearchUrl(filters);
